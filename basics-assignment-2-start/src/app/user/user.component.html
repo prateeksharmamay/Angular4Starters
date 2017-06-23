@@ -1,0 +1,6 @@
+<label for="uname">User Name</label>
+<input id="uname" type="text" [(ngModel)]="username" (input)="onUserNameInput($event)">
+
+<p>{{username}}</p>
+
+<button class="btn btn-primary" (click)="submitUserName()" [disabled]="username === ''">Submit UserName</button>
