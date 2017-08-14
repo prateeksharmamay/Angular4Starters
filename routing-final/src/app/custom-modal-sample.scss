@@ -1,0 +1,77 @@
+$color-gray-med-light: #d7d7d7; //border
+
+.custom-modal-container {
+  padding: 15px;
+}
+
+.custom-modal-header {
+  /*background-color: #219161;
+  color: #fff;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  margin-top: -15px;
+  margin-bottom: 40px;*/
+  border: none;
+  background-color: #f2f2f2;
+  padding: 15px 20px;
+  text-align: left;
+  min-height: 16.42857px;
+}
+
+.admin-upload-file-modal {
+
+}
+
+.vertical-alignment-helper{
+  //height: auto;
+  padding: 0 30px;
+}
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.uploaded-file-name {
+  //margin-left: 15px;
+}
+
+.uploaded-file-error-message{
+  color: #cc0000;
+}
+
+
+.admin-input-attachment {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid $color-gray-med-light;
+  background: #f5f5f5;
+  font-weight: normal;
+  color: #00679e;
+  cursor: pointer;
+}
+
+
+.modal-footer {
+
+}
+
+.award-supplier button {
+  float: right !important;
+}
+
+.blued {
+  color: #fff;
+  background: #199DE0;
+}
+
+button {
+  float: right;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 0px;
+}

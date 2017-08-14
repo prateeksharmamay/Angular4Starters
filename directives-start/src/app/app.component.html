@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let oddnum of oddNos"
+            [ngClass]="{oddstyle: oddnum % 2 !== 0}"
+            [ngStyle]="{backgroundColor: oddnum % 2 !== 0 ? 'grey': 'transparent'}">
+            {{oddnum}}
+          </li>
+        </div>
+
+        <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let num of evenNos"
+            [ngClass]="{even: num % 2 === 0}"
+            [ngStyle]="{backgroundColor: num % 2 === 0 ? 'blue': 'transparent'}">
+            {{num}}
+          </li>
+        </div>
+
+        <div [ngSwitch]="valNum">
+          <p *ngSwitchCase="5">Value is 5</p>
+          <p *ngSwitchCase="10">Value is 10</p>
+          <p *ngSwitchDefault>Default Value</p>
+        </div>
+
+        <!--<div *appUnless="!onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let oddnum of oddNos"
+            [ngClass]="{oddstyle: oddnum % 2 !== 0}"
+            [ngStyle]="{backgroundColor: oddnum % 2 !== 0 ? 'grey': 'transparent'}">
+            {{oddnum}}
+          </li>
+        </div>
+
+        <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            *ngFor="let num of evenNos"
+            [ngClass]="{even: num % 2 === 0}"
+            [ngStyle]="{backgroundColor: num % 2 === 0 ? 'blue': 'transparent'}">
+            {{num}}
+          </li>
+        </div>-->
+
+
+      </ul>
+      <p appBasicHighlightDirective>Style it off !!!</p>
+      <p appBetterHighlightDirective [defaultColor]="'yellow'" [highlightColor]="'pink'">Better Styling Paragraph !!!</p>
+      <!--<ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>-->
+    </div>
+  </div>
+</div>
+
+<!--<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
+      <br><br>
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+          <li
+            class="list-group-item" *ngFor="let num of oddNos"> {{num}}
+          </li>
+        </div>
+
+        <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item" *ngFor="let num of evenNos"> {{num}}
+          </li>
+        </div>
+      </ul>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
+    </div>
+  </div>
+</div>-->

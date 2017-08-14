@@ -1,0 +1,12 @@
+
+<ul>
+  <li *ngFor="let subtree of siteTree" class="parent_li">
+    <div *ngIf="true" class="arrow-right-css"></div>
+    <span (click)="toggle(subtree)" [ngClass]="{'': subtree.children.length == 0,'glyphicon-minus':subtree.showChild && subtree.children.length > 0, 'glyphicon-plus':!subtree.showChild && subtree.children.length > 0}"><span style="padding-left: 5px;border: none">{{subtree.name}}</span></span>
+
+
+    <app-gb-tree-view *ngIf="subtree.showChild" [siteTree]="subtree.children"></app-gb-tree-view>
+
+  </li>
+</ul>
+

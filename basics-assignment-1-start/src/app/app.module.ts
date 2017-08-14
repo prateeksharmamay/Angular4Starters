@@ -6,13 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warningAlert/warningAlert.component';
+import { SiteMapComponent } from './site-map/site-map.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SuccessAlertComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    SiteMapComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,116 @@
+<div class="container-fluid custom-modal-container admin-upload-file-modal">
+  <div class="vertical-alignment-helper">
+    <div class="row custom-modal-header">
+      <div class="col-sm-12">
+        <i (click)="clearError()" class="icon-decline pull-right" data-dismiss="modal"></i>
+        <h3 class="modal-title text-black" translate="">Upload File</h3>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="row" [ngClass]="{'myclass' : shouldUseMyClass}">
+    <div class="col-xs-12">
+      <div class="jumbotron">
+        <h1>Do the math to quit:</h1>
+        <p class="lead">I received an injection of the number <strong>{{context.num1}}</strong> and the number <strong>{{context.num2}}</strong></p>
+        <span>What is the sum?</span>
+        <input class="form-control" type="text" #answer (keyup)="onKeyUp(answer.value)" autofocus>
+      </div>
+    </div>
+  </div>-->
+</div>
+
+
+
+
+<!--<div id="" class="container-fluid custom-modal-container admin-upload-file-modal">
+  <div class="vertical-alignment-helper">
+    <div class="admin-upload-file-modal-dialog modal-dialog vertical-align-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i (click)="clearError()" class="icon-decline pull-right" data-dismiss="modal"></i>
+          <h3 class="modal-title text-black" translate="">Upload File</h3>
+        </div>
+        <div class="modal-body clearfix">
+          &lt;!&ndash; excel &ndash;&gt;
+          <div class="admin-form-attachment admin-form-input-section row">
+
+            <div class="form-image-upload-section">
+              <div class="form-image-upload-message">
+                <p><span translate="">Supported file types:</span>
+                  <span ng-repeat="fileType in acceptedExcelFileTypes">{{fileType}}{{$last ? '' : ', '}}</span>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <span class="form-input-image-button" ng-click="simulateUploadExcelAttachment()"><i class="fa fa-paperclip" aria-hidden="true"></i><span translate="">Choose file</span></span>
+                <input id="landingPageExcelInput" type="file" class="form-file-input" nv-file-select uploader="uploader" multiple/>
+              </div>
+              <div>
+                <div class="col-md-8">
+                  <ul class="image-file-list list-unstyled">
+                    <li ng-repeat="item in uploader.queue" class="image-file-list-item clearfix">
+                      <span class="image-file-name" ng-bind="item.file.name"></span>
+                      <button class="btn-small btn-primary" ng-click="item.upload()" translate="">Upload</button>
+                      <button class="btn-small btn-inverse" ng-click="item.remove()" translate="">Remove</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-12">
+                  <ul class="image-file-list image-file-error-list list-unstyled" style="max-height:600px;">
+                    <div ng-if="wrongExtension" translate-value-message4="{{wrongExtension}}" translate=""><b>Errors:</b>
+                      <i>{{wrongExtension}}</i> does not have the right extension
+                    </div>
+                    <div ng-if="errorMessages.length > 0"><p><b translate="">Errors: </b></p>
+                      <table class="table">
+                        <tr ng-repeat="errorMessage in errorMessages">
+                          <td>{{$index+1}}.&nbsp;</td>
+                          <td>
+                            <li translate-value-message1="{{errorMessage.messageId}}" translate-value-message2="{{errorMessage.type}}" translate="">
+
+                              Received Error Message : <b>{{errorMessage.messageId}}</b> of type : <b>{{errorMessage.type}}</b>
+                            </li>
+                            <li style="padding-top:5px;">
+                              <span translate="">Additional Information: </span><span ng-if="errorMessage.context">{{errorMessage.context}}</span><span ng-if="errorMessage.id">,{{errorMessage.id}}</span><span ng-if="errorMessage.sheetName">,{{errorMessage.sheetName}}</span><span ng-if="errorMessage.columnName">,{{errorMessage.columnName}}</span>
+                            </li>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div ng-if="errorMessagesTranslate"><p><b translate="">Errors: </b></p>
+                      Received Error Message : <b>{{errorMessagesTranslate}}</b>
+                    </div>
+                    <br/>
+                    <div class="policy-management-success-upload" ng-if="successMessagesTranslate">
+                      <p><b translate="">Success: </b></p>
+                      {{successMessagesTranslate}}
+                    </div>
+                    <br/>
+                    <div class="policy-management-success-upload" ng-if="successMessages.length > 0">
+                      <p class="policy-management-success-upload"><b translate="">Success: </b></p>
+                      <table class = "table">
+                        <tr ng-repeat = "successMessage in successMessages">
+                          <td>{{$index+1}}.&nbsp;</td>
+                          <td>
+                            <li ng-if ="successMessage" translate-value-message3="{{successMessage}}" translate="policy_management_RECIEVED_SUCCESS_MESSAGES">Successfully uploaded : <b>{{successMessage}}</b></li>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          &lt;!&ndash; excel end&ndash;&gt;
+        </div>
+        <div class="modal-footer" >
+          <button type="button" class="btn btn-inverse btn-medium" ng-click="clearError()" data-dismiss="modal" translate="policy_management_QUOTE_MODEL_DONE_BUTTON">Done</button>
+        </div>
+      </div>&lt;!&ndash; /.modal-content &ndash;&gt;
+    </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;
+  </div>
+</div>-->
